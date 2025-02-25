@@ -1,4 +1,4 @@
-# Jandira---GCM---Mapa-For-a# Tabela de Registros
+# Jandira---GCM---Mapa-Força# 
 
 Este projeto é um sistema para gerenciar registros em uma tabela estilo Excel. Ele permite adicionar, editar e visualizar entradas de forma simples, utilizando **HTML**, **CSS**, **JavaScript** e **jQuery** (para DataTables).
 
@@ -28,4 +28,5 @@ Se você deseja contribuir para este projeto, faça um **fork**, crie um **branc
 
 ## Licença
 
-Este projeto está sob a licença [MIT](https://opensource.org/licenses/MIT).
+
+
