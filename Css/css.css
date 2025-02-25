@@ -1,0 +1,173 @@
+/* Reset de margin, padding e box-sizing para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #004698; 
+    display: flex;  
+}
+
+/* Estilo do título no cabeçalho */
+.Title {
+    font-family: "Kodchasan", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3vw;
+    margin: auto;
+    color: rgb(231, 231, 231);
+}
+
+/* Estilo da logo */
+#Logo {
+    width: 15%;
+    height: 10vw;
+    padding: 1vw;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #004698;
+    color: white;
+}
+
+/* Estilo do título do rodapé */
+.footerTitle {
+    font-family: "Kodchasan", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    font-size: 2vw;
+    padding: 1vw 0;
+}
+
+/* Estilo do botão "Novo Registro" */
+.btn-novo-registro {
+    background-color: orange;
+    color: blue;
+    font-family: "Kodchasan", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Estilo do container do formulário */
+#form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 70, 152, 1);
+    display: none; /* Inicialmente oculto */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow-y: auto; /* Permite rolagem */
+    padding: 1rem; /* Evita cortes no topo e na base */
+}
+
+/* Estilo do formulário */
+#form-registro {
+    width: 85%;
+    margin-left: 7.5%;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    max-height: 90vh; /* Impede que ultrapasse a tela */
+    overflow-y: auto; /* Adiciona rolagem dentro do formulário */
+}
+
+/* Estilo para inputs e selects dentro do formulário */
+#form-registro input,
+#form-registro select {
+    width: 100%; 
+    height: 2vw;
+    background-color: #316DC8; /* Fundo azul */
+    color: white; /* Texto branco */
+    border: none;
+    border-radius: 5px;
+    font-size: 1vw;
+    margin-bottom: 1vw;
+}
+
+/* Estilo para os placeholders dos inputs */
+::placeholder {
+    font-family: "Kodchasan", serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 1vw;
+    color: white;
+}
+
+/* Estilo para inputs específicos de data, hora, número e texto */
+input[type="date"],
+input[type="time"],
+input[type="number"],
+input[type="text"] {
+    font-family: "Kodchasan", serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 1%;
+    color: black; /* Cor do texto */
+    background-color: #f0f0f0; /* Cor de fundo */
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Cor da borda */
+}
+
+/* Estilo para opções dentro dos selects */
+select option {
+    font-family: "Kodchasan", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Estilo para os labels */
+label {
+    font-family: "Kodchasan", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.5vw; /* Aumenta o tamanho da fonte */
+    color: rgb(0, 0, 0); /* Cor dos labels */
+}
+
+/* Estilo do botão "Salvar" */
+button[type="submit"] {
+    background-color: green;
+    padding: 1vw;
+    font-size: 1vw;
+    color: white;
+    border: none;
+}
+
+/* Efeito de hover para o botão "Salvar" */
+button:hover[type="submit"] {
+    background-color: rgb(13, 250, 13); /* Altera a cor no hover */
+}
+
+/* Estilo do botão "Cancelar" */
+button[type="button"] {
+    background-color: rgb(214, 4, 4);
+    padding: 1vw;
+    font-size: 1vw;
+    color: white;
+    border: none;
+}
+
+/* Efeito de hover para o botão "Cancelar" */
+button:hover[type="button"] {
+    background-color: rgb(255, 0, 0); /* Altera a cor no hover */
+}
+
+/* Estilo para o botão "Novo Registro" */
+#btn-novo-registro {
+    color: white;
+    font-size: 1.5vw;
+    background-color: green;
+}
