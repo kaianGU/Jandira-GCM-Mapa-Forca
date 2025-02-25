@@ -1,4 +1,4 @@
-# Jandira---GCM---Mapa-Força# 
+# Jandira---GCM---Mapa-Força
 
 Este projeto é um sistema para gerenciar registros em uma tabela estilo Excel. Ele permite adicionar, editar e visualizar entradas de forma simples, utilizando **HTML**, **CSS**, **JavaScript** e **jQuery** (para DataTables).
 
@@ -26,7 +26,7 @@ Este projeto é um sistema para gerenciar registros em uma tabela estilo Excel. 
 
 Se você deseja contribuir para este projeto, faça um **fork**, crie um **branch** para suas mudanças e envie um **pull request** com as alterações.
 
-## Licença
+
 
 
 
