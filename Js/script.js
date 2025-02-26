@@ -1,21 +1,34 @@
 $(document).ready(function () {
-    // Inicializa DataTable
-    $('#tabela-registros').DataTable({
+    var table = $('#tabela-registros').DataTable({
+        responsive: true,
+        scrollX: true,
         language: {
             url: "https://cdn.datatables.net/plug-ins/1.13.6/i18n/pt-BR.json"
-        }
+        },
+        searching: false,
+        order: [[0, "desc"]],
+        columnDefs: [
+            {
+                targets: 0, // Índice da coluna "Data"
+                render: function (data, type, row) {
+                    if (type === "display" || type === "filter") {
+                        let partes = data.split("-");
+                        return `${partes[2]}/${partes[1]}/${partes[0]}`;
+                    }
+                    return data;
+                }
+            }
+        ]
     });
 
-    // Função para obter a data atual no formato YYYY-MM-DD
     function getDataAtual() {
         let hoje = new Date();
         let ano = hoje.getFullYear();
-        let mes = String(hoje.getMonth() + 1).padStart(2, '0'); // Adiciona zero à esquerda se necessário
+        let mes = String(hoje.getMonth() + 1).padStart(2, '0');
         let dia = String(hoje.getDate()).padStart(2, '0');
         return `${ano}-${mes}-${dia}`;
     }
 
-    // Função para obter a hora atual no formato HH:MM
     function getHoraAtual() {
         let agora = new Date();
         let horas = String(agora.getHours()).padStart(2, '0');
@@ -23,26 +36,41 @@ $(document).ready(function () {
         return `${horas}:${minutos}`;
     }
 
-    // Botão "Novo Registro" - Mostra o formulário e preenche data e hora automaticamente
+    function getProximoCA(data) {
+        let ultimoRegistro = JSON.parse(localStorage.getItem("ultimoCA")) || { data: "", ca: 0 };
+
+        if (ultimoRegistro.data === data) {
+            ultimoRegistro.ca += 1;
+        } else {
+            ultimoRegistro.ca = 1; // Se for um novo dia, reinicia para 1
+        }
+
+        localStorage.setItem("ultimoCA", JSON.stringify({ data: data, ca: ultimoRegistro.ca }));
+        return ultimoRegistro.ca;
+    }
+
     $('#btn-novo-registro').on('click', function () {
-        $('#data').val(getDataAtual());  // Define a data atual
-        $('#horaInicio').val(getHoraAtual()); // Define a hora atual
-        $('#form-container').slideDown(); // Mostra o formulário
+        $('#data').val(getDataAtual());
+        $('#horaInicio').val(getHoraAtual());
+        $('#form-container').slideDown();
     });
 
-    // Botão "Cancelar" - Oculta o formulário
     $('#btn-cancelar').on('click', function () {
         $('#form-container').slideUp();
     });
 
-    // Captura o evento de envio do formulário
     $('#form-registro').on('submit', function (e) {
         e.preventDefault();
 
-        // Captura os valores do formulário
+        let dataISO = $('#data').val();
+        let partesData = dataISO.split("-");
+        let dataBR = `${partesData[2]}/${partesData[1]}/${partesData[0]}`;
+
+        let caAtual = getProximoCA(dataISO); // Obtém o CA correto para a data
+
         var registro = [
-            $('#data').val(),
-            $('#ca').val(),
+            dataISO,
+            caAtual, // O CA será calculado automaticamente
             $('#vtr').val(),
             $('#kmInicial').val(),
             $('#horaInicio').val(),
@@ -62,14 +90,9 @@ $(document).ready(function () {
             $('#radioOperador').val()
         ];
 
-        // Adiciona a nova linha à tabela
-        var table = $('#tabela-registros').DataTable();
         table.row.add(registro).draw();
 
-        // Oculta o formulário após salvar
         $('#form-container').slideUp();
-
-        // Limpa o formulário
         $('#form-registro')[0].reset();
     });
 });

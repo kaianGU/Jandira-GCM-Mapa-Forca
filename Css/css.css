@@ -170,4 +170,69 @@ button:hover[type="button"] {
     color: white;
     font-size: 1.5vw;
     background-color: green;
+    border: none;
+    padding: 0.5vw 2vw;
 }
+
+
+#btn-novo-registro:hover {
+    color: white;
+    font-size: 1.5vw;
+    background-color: rgb(13, 250, 13);
+}
+
+
+.content{
+    font-family: "Kodchasan", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size:3vw;
+    text-align: center;
+    margin-top: 2vw;
+}
+
+
+/* Garante que a página ocupe toda a altura da tela */
+html, body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* O conteúdo cresce para empurrar o footer para baixo */
+main {
+    flex-grow: 1;
+}
+
+/* Rodapé sempre no final */
+footer {
+    background-color: #004698;
+    color: white;
+    text-align: center;
+    padding: 1vw 0;
+}
+
+
+/* Estiliza a tabela com bordas */
+#tabela-registros {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1vw;
+    border: 2px solid #004698; /* Cor da borda principal */
+}
+
+/* Adiciona bordas às células da tabela */
+#tabela-registros th,
+#tabela-registros td {
+    border: 1px solid #004698; /* Cor da borda interna */
+    padding: 0.5vw;
+    text-align: center;
+}
+
+/* Estiliza o cabeçalho da tabela */
+#tabela-registros thead {
+    background-color: #004698;
+    color: white;
+}
+
+
