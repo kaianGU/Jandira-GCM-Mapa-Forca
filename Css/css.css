@@ -18,13 +18,12 @@ header {
     font-style: normal;
     font-size: 3vw;
     margin: auto;
-    color: rgb(231, 231, 231);
+    color: #e7e7e7;
 }
 
 /* Estilo da logo */
 #Logo {
-    width: 15%;
-    height: 10vw;
+    width: 180px;
     padding: 1vw;
 }
 
