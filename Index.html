@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -34,16 +35,43 @@
     <div id="form-container" style="display: none;">
         <form id="form-registro">
             <!-- Campos do formulário -->
-            <label>Data: <input type="date" id="data" placeholder="Selecione a data" required></label><br>
-            <label>Ca: <input type="number" id="ca" placeholder="Digite o número do CA" required></label><br>
-            <label>VTR: <input type="text" id="vtr" placeholder="Digite o código do VTR" required></label><br>
-            <label>Km Inicial: <input type="number" id="kmInicial" placeholder="Informe o KM inicial" required></label><br>
-            <label>Hora Início: <input type="time" id="horaInicio" placeholder="Selecione a hora de início" required></label><br>
-            <label>Km Final: <input type="number" id="kmFinal" placeholder="Informe o KM final" required></label><br>
-            <label>Hora Final: <input type="time" id="horaFinal" placeholder="Selecione a hora final" required></label><br>
-            <label>Código: <input type="text" id="codigo" placeholder="Ex: E-13, C-11" required></label><br>
+            <div class="labelzao">
+              <label class="labado" >Data: <input class="inputzado" type="date" id="data" placeholder="Selecione a data" required></label><br>
+            </div>
+
+            <div class="labelzao">
+
+            <div class="labelzao"></div>
+            <label>Ca: <input  class="inputzado" type="number" id="ca" placeholder="Digite o número do CA" required></label><br>
+            </div>
+
+            <div class="labelzao">
+            <label>VTR: <input  class="inputzado" type="text" id="vtr" placeholder="Digite o código do VTR" required></label><br>
+            </div>
+
+            <div class="labelzao">
+            <label>Km Inicial: <input  class="inputzado" type="number" id="kmInicial" placeholder="Informe o KM inicial" required></label><br>
+            </div>
+            
+            <div class="labelzao">
+            <label>Hora Início: <input class="inputzado" type="time" id="horaInicio" placeholder="Selecione a hora de início" required></label><br>
+            </div>
+            
+            <div class="labelzao">
+            <label>Km Final: <input class="inputzado" type="number" id="kmFinal" placeholder="Informe o KM final" required></label><br>
+            </div>
+            
+            <div class="labelzao">
+            <label>Hora Final: <input class="inputzado" type="time" id="horaFinal" placeholder="Selecione a hora final" required></label><br>
+            </div>
+            
+            <div class="labelzao">
+            <label>Código: <input class="inputzado" type="text" id="codigo" placeholder="Ex: E-13, C-11" required></label><br>
+            </div> 
+            
             
             <!-- Selects -->
+            <div class="labelzao">
             <label>Ocorrência: 
                 <select id="ocorrencia" required>
                     <option value="" disabled selected>Selecione uma ocorrência</option>
@@ -52,7 +80,9 @@
                     <option value="Opção 3">Opção 3</option>
                 </select>
             </label><br>
+            </div>
             
+            <div class="labelzao">
             <label>Local/Natureza: 
                 <select id="localNatureza" required>
                     <option value="" disabled selected>Selecione o local</option>
@@ -60,7 +90,9 @@
                     <option value="Local 2">Local 2</option>
                 </select>
             </label><br>
+            </div>
             
+            <div class="labelzao">
             <label>Bairro:
                 <select id="bairro" required>
                     <option value="" disabled selected>Selecione o bairro</option>
@@ -68,16 +100,40 @@
                     <option value="Bairro B">Bairro B</option>
                 </select>
             </label><br>
+            </div>
         
             <!-- Campos adicionais -->
-            <label>RE: <input type="number" id="re" placeholder="Digite o número do RE" required></label><br>
-            <label>Encarregado: <input type="text" id="encarregado" placeholder="Nome do encarregado" required></label><br>
-            <label>RE Encarregado: <input type="number" id="reEncarregado" placeholder="Número do RE Encarregado" required></label><br>
-            <label>Motorista: <input type="text" id="motorista" placeholder="Nome do motorista" required></label><br>
-            <label>RE Motorista: <input type="number" id="reMotorista" placeholder="Número do RE Motorista" required></label><br>
-            <label>3º Homem: <input type="text" id="terceiroHomem" placeholder="Nome do 3º Homem (opcional)"></label><br>
-            <label>RE 3º Homem: <input type="number" id="reTerceiroHomem" placeholder="Número do RE 3º Homem"></label><br>
-            <label>Radio Operador: <input type="text" id="radioOperador" placeholder="Nome do operador de rádio"required></label><br>
+            <div class="labelzao">
+            <label>RE: <input class="inputzado" type="number" id="re" placeholder="Digite o número do RE" required></label><br>
+            </div>
+
+            <div class="labelzao">
+            <label>Encarregado: <input class="inputzado" type="text" id="encarregado" placeholder="Nome do encarregado" required></label><br>
+            </div>
+
+            <div class="labelzao">
+            <label>RE Encarregado: <input class="inputzado" type="number" id="reEncarregado" placeholder="Número do RE Encarregado" required></label><br>
+            </div>
+
+            <div class="labelzao">
+            <label>Motorista: <input class="inputzado" type="text" id="motorista" placeholder="Nome do motorista" required></label><br>
+            </div>
+
+            <div class="labelzao">
+            <label>RE Motorista: <input class="inputzado" type="number" id="reMotorista" placeholder="Número do RE Motorista" required></label><br>
+            </div>
+
+            <div class="labelzao">
+            <label>3º Homem: <input class="inputzado" type="text" id="terceiroHomem" placeholder="Nome do 3º Homem (opcional)"></label><br>
+            </div>
+
+            <div class="labelzao">
+            <label>RE 3º Homem: <input class="inputzado" type="number" id="reTerceiroHomem" placeholder="Número do RE 3º Homem"></label><br>
+            </div>
+
+            <div class="labelzao">
+            <label>Radio Operador: <input class="inputzado" type="text" id="radioOperador" placeholder="Nome do operador de rádio"required></label><br>
+            </div>
         
             <!-- Botões -->
             <button type="submit">Salvar</button>
@@ -87,35 +143,34 @@
 
     <!-- Tabela de registros -->
     <h2 class="content">Registros</h2>
-    <div class="table-container"></div>
+    <div class="table-container">
     <table id="tabela-registros" class="display">
         <thead>
             <tr>
-                <th>Data</th>
-                <th>Ca</th>
-                <th>VTR</th>
-                <th>Km Inicial</th>
-                <th>Hora Início</th>
-                <th>Km Final</th>
-                <th>Hora Final</th>
-                <th>Código</th>
-                <th>Ocorrência</th>
-                <th>Local/Natureza</th>
-                <th>Bairro</th>
-                <th>RE</th>
-                <th>Encarregado</th>
-                <th>RE Encarregado</th>
-                <th>Motorista</th>
-                <th>RE Motorista</th>
-                <th>3º Homem</th>
-                <th>RE 3º Homem</th>
-                <th>Radio Operador</th>
+                <th class="fonte">Data</th>
+                <th class="fonte">Ca</th>
+                <th class="fonte">VTR</th>
+                <th class="fonte">Km Inicial</th>
+                <th class="fonte">Hora Início</th>
+                <th class="fonte">Km Final</th>
+                <th class="fonte">Hora Final</th>
+                <th class="fonte">Código</th>
+                <th class="fonte">Ocorrência</th>
+                <th class="fonte">Local/Natureza</th>
+                <th class="fonte">Bairro</th>
+                <th class="fonte">RE</th>
+                <th class="fonte">Encarregado</th>
+                <th class="fonte">RE Encarregado</th>
+                <th class="fonte">Motorista</th>
+                <th class="fonte">RE Motorista</th>
+                <th class="fonte">3º Homem</th>
+                <th class="fonte">RE 3º Homem</th>
+                <th class="fonte">Radio Operador</th>
             </tr>
         </thead>
-        <tbody>
-            <!-- Dados da tabela são preenchidos dinamicamente -->
-        </tbody>
+     
     </table>
+    </div>
 </div>
 
     <!-- Script que contém a lógica da página -->
