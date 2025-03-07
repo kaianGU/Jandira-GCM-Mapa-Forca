@@ -9,15 +9,27 @@
 header {
     background-color: #004698; 
     display: flex;  
+    }
+
+.contentHeader{
+    width: 80%;
+    margin-left: 10%;
+
+    display: inline-block;
+    height: 200px;
+
 }
 
 /* Estilo do título no cabeçalho */
 .Title {
-    font-family: "Kodchasan", serif;
+    font-family: "Lato", sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 3vw;
-    margin: auto;
+    position: relative;
+    top: -60%;
+    left: 1%;
+    text-align: center;
     color: #e7e7e7;
 }
 
@@ -35,7 +47,7 @@ footer {
 
 /* Estilo do título do rodapé */
 .footerTitle {
-    font-family: "Kodchasan", serif;
+    font-family: "Lato", sans-serif;
     font-weight: 500;
     font-style: normal;
     text-align: center;
@@ -182,7 +194,7 @@ button:hover[type="button"] {
 
 
 .content{
-    font-family: "Kodchasan", serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size:3vw;
