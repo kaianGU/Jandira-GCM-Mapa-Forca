@@ -107,6 +107,7 @@ footer {
     border-radius: 5px;
     font-size: 1vw;
     margin-bottom: 1vw;
+    outline: none;
 }
 
 /* Estilo para os placeholders dos inputs */
