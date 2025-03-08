@@ -10,6 +10,7 @@ header {
     background-color: #004698; 
     display: flex;  
     /* width: 80%; */
+    height: 10vw;
     }
 
 .contentHeader{
@@ -25,9 +26,9 @@ header {
     font-family: "Lato", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 3vw;
+    font-size: 2vw;
     position: relative;
-    top: -60%;
+    top: -50%;
     left: 1%;
     text-align: center;
     color: #e7e7e7;
@@ -35,7 +36,7 @@ header {
 
 /* Estilo da logo */
 #Logo {
-    width: 180px;
+    width: 150px;
     padding: 1vw;
 }
 
@@ -51,7 +52,7 @@ footer {
     font-weight: 500;
     font-style: normal;
     text-align: center;
-    font-size: 2vw;
+    font-size: 1.5  vw;
     padding: 1vw 0;
 }
 
@@ -184,8 +185,10 @@ button:hover[type="button"] {
     font-size: 1.5vw;
     background-color: green;
     border: none;
-    margin-left: 10%;
+    margin-left: 76%;
+    margin-top: 5vw;
     padding: 0.5vw 2vw;
+    border-radius: 0.5vw;
 }
 
 
@@ -308,6 +311,7 @@ footer {
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
+    /* color: red; */
 }
 
 /* Estiliza o label */
@@ -328,7 +332,7 @@ footer {
 
 /* Aplica o zoom ao passar o mouse sobre o input */
 .labelzao input:hover {
-    transform: scale(1.02   ); /* Aumenta o tamanho do input em 5% */
+     /* Aumenta o tamanho do input em 5% */
 }
 
 /* Reduz o tamanho do label ao passar o mouse sobre o input */
@@ -353,9 +357,6 @@ input[type="time"] {
 }
 
 
-.inputzado{
-    width: 70%;
-}
 
 .labelzao label:hover {
     transform: scale(1.01   ); /* Aumenta o tamanho do input em 5% */
@@ -364,4 +365,25 @@ input[type="time"] {
 .labelzao {
     overflow: hidden;
     /* Outros estilos */
+}
+
+
+
+.dataTables_length select {
+    font-size: 12px;
+}
+.dataTables_length label {
+    font-size: 14px; /* Substitua 14px pelo tamanho desejado */
+}
+
+.inputzado{
+    border: none;
+    outline: none;
+}
+
+
+
+
+.labelzao label {
+    color: #d7d7d7; /* Substitua pelo código da cor desejada */
 }
